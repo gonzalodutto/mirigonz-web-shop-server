@@ -11,5 +11,5 @@ app.use("/products", productsRouter);
 app.use("/categories", categoriesRouter);
 
 app.listen(PORT, () =>
-  console.log(`Server started in port: ${PORT}. Hola Gonza! :)`)
+  console.log(`Server started in port: ${PORT}. MiriGonz: Hola! :)`)
 );
