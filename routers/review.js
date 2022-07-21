@@ -1,14 +1,14 @@
 const Router = require("express").Router;
-const Product = require("../models").product;
+const Review = require("../models").review;
 
 const router = new Router();
 
-//get all products
-//http :4000/products
+//get all reviews
+//http :4000/reviews
 router.get("/", async (request, response, next) => {
   try {
-    const products = await Product.findAll();
-    response.send(products);
+    const reviews = await Review.findAll();
+    response.send(reviews);
   } catch (e) {
     console.log(e.message);
     next(e);
@@ -16,14 +16,14 @@ router.get("/", async (request, response, next) => {
 });
 
 //get one product by :id with params
-//http :4000/products/3
+//http :4000/reviews/3
 router.get("/:id", async (req, res, next) => {
   try {
     // 1. req.params.id;
-    const productId = req.params.id;
+    const reviewId = req.params.id;
     // 2. findByPk => id
-    const theProduct = await Product.findByPk(productId);
-    res.send(theProduct);
+    const theReview = await Review.findByPk(reviewId);
+    res.send(theReview);
   } catch (e) {
     next(e);
   }

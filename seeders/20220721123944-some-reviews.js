@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           text: "I would like to have it in purple. How can I do? Thanks.",
-          reviewerName: "Miriam",
+          reviewerName: "Miriam 😎",
           productId: 18,
           createdAt: new Date(),
           updatedAt: new Date(),
