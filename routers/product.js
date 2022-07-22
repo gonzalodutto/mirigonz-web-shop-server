@@ -1,5 +1,6 @@
 const Router = require("express").Router;
 const Product = require("../models").product;
+const Review = require("../models").review;
 
 const router = new Router();
 
@@ -22,7 +23,7 @@ router.get("/:id", async (req, res, next) => {
     // 1. req.params.id;
     const productId = req.params.id;
     // 2. findByPk => id
-    const theProduct = await Product.findByPk(productId);
+    const theProduct = await Product.findByPk(productId, { include: Review });
     res.send(theProduct);
   } catch (e) {
     next(e);

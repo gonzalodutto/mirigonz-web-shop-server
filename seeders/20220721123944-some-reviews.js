@@ -22,7 +22,7 @@ module.exports = {
         {
           text: "Hi man!",
           reviewerName: "Gonzalo",
-          productId: 18,
+          productId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
